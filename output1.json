@@ -1,0 +1,564 @@
+{
+  "chunks": [
+    {
+      "file": "chunk_001.txt",
+      "summary": "Rəsmi onlayn alış-veriş platforması, müxtəlif kateqoriyalar və minlərlə məhsul, rahat sifariş imkanı.",
+      "questions": [
+        "Q: Birmarket nədir?"
+      ]
+    },
+    {
+      "file": "chunk_002.txt",
+      "summary": "Mobil tətbiq və veb versiya istifadəsi rahatdır, bildirişlər sayəsində endirimlər, kampaniyalar və yeniliklər tez əldə edilir.",
+      "questions": [
+        "Q: Mobil tətbiq və veb versiya arasında fərq nədir?"
+      ]
+    },
+    {
+      "file": "chunk_003.txt",
+      "summary": "Birmarket müxtəlif satıcı şirkətləri bir araya gətirir, məhsulların səhifəsində satıcı adı qeyd olunur, alış-verişdə şəffaflıq təmin edilir.",
+      "questions": [
+        "Q: Birmarket-də məhsulları kim satır?"
+      ]
+    },
+    {
+      "file": "chunk_004.txt",
+      "summary": "Promokod sifariş zamanı bonus və ya endirim verir, xüsusi hallarda e-poçtla göndərilir, sifariş zamanı daxil edilə bilər, bildirişlərlə yeniliklərdən xəbərdar olmaq mümkündür.",
+      "questions": [
+        "Q: Promokod nədir və necə istifadə olunur?"
+      ]
+    },
+    {
+      "file": "chunk_005.txt",
+      "summary": "Birmarket-də mövcud ödəniş üsulları: bank kartı, bonus, kuryer ödənişi, BirBank taksit kartları, kreditlə ödəniş.",
+      "questions": [
+        "Q: Birmarket-də hansı ödəniş üsulları mövcuddur?"
+      ]
+    },
+    {
+      "file": "chunk_006.txt",
+      "summary": "Bank kartı ilə onlayn ödəniş: Azərbaycan və xarici bank kartları, geri qaytarılma müddətləri (BirBank 30 dəq, digər AZ 14 iş günü, xarici 30 iş günü).",
+      "questions": [
+        "Q: Bank kartı ilə onlayn ödəniş edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_007.txt",
+      "summary": "Taksitli ödəniş: BirBank və LeoBank kartları ilə məhsulu hissə-hissə ödəmək, saytda taksit sayı göstərilir, geri qaytarma şərtləri.",
+      "questions": [
+        "Q: Taksitli alış-veriş edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_008.txt",
+      "summary": "LeoBank kartı ilə hissəli ödəniş: məhsulu təhvil aldıqdan sonra tətbiqdə ödənişi 3–24 aya bölmək, komissiyalar 0–36%, LeoBank limiti aktiv olmalıdır.",
+      "questions": [
+        "Q: LeoBank kartı ilə hissəli ödəniş necə işləyir?"
+      ]
+    },
+    {
+      "file": "chunk_009.txt",
+      "summary": "Məhsulu təhvil alarkən ödəniş üsulları, kuryer və PUDO qaydaları, Leobank kartı ilə taksit, Call Center dəstəyi, ödənişin bölünməsi",
+      "questions": [
+        "Q: Məhsulu kuryer ilə çatdırılma zamanı necə ödəniş edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_010.txt",
+      "summary": "BirBonus vasitəsilə ödəniş, tam və ya qismən bonus istifadəsi, səhifədə seçim bölməsi",
+      "questions": [
+        "Q: Birmarketdə BirBonus-dan necə istifadə etmək olar?"
+      ]
+    },
+    {
+      "file": "chunk_011.txt",
+      "summary": "2 kredit xətti, BirBank taksit kartı, Daxili kredit, kredit",
+      "questions": [
+        "Q: Kredit şərtləriniz nədir?"
+      ]
+    },
+    {
+      "file": "chunk_012.txt",
+      "summary": "BirBank taksit kartı ilə faizsiz hissəli ödəniş, kart limiti, aylıq ödəniş tarixi, məhsul yanında taksit sayı, kredit tarixçəsinə təsir yoxdur",
+      "questions": [
+        "Q: BirBank taksit kartı ilə ödəniş şərtləri nədir?"
+      ]
+    },
+    {
+      "file": "chunk_013.txt",
+      "summary": "Daxili kredit (BOKT) ödəniş şərtləri, kredit limiti, komissiya, müddət, ilkin ödəniş, faiz hesablamaları",
+      "questions": [
+        "Q: Daxili kredit şərtləri nədir?"
+      ]
+    },
+    {
+      "file": "chunk_014.txt",
+      "summary": "Aylıq kredit ödənişi, ödəniş üsulları: BirBank mobil tətbiqi və ödəniş terminalları, CIF kodu ilə identifikasiya",
+      "questions": [
+        "Q: Kreditimin aylıq ödənişini necə edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_015.txt",
+      "summary": "Kredit müraciətinin imtina səbəbi, BOKT və Kapital Bank dəstəyi",
+      "questions": [
+        "Q: Niyə kredit müraciətimə imtina gəlib?"
+      ]
+    },
+    {
+      "file": "chunk_016.txt",
+      "summary": "Çatdırılmada gecikmə halları, dəstək və geri dönüş prosesi",
+      "questions": [
+        "Q: Çatdırılmada gecikmə olarsa nə etməli?"
+      ]
+    },
+    {
+      "file": "chunk_017.txt",
+      "summary": "Kuryer çatdırılması zamanı əks hallarda, növbəti gün, dəstək xidməti",
+      "questions": [
+        "Q: Kuryer mənə çatmasa nə etməliyəm?"
+      ]
+    },
+    {
+      "file": "chunk_018.txt",
+      "summary": "Sifarişin statusunu izləmək, tətbiqdə kabinet, 'Mənim sifarişlərim' sekmesi",
+      "questions": [
+        "Q: Sifarişim hardadır?"
+      ]
+    },
+    {
+      "file": "chunk_019.txt",
+      "summary": "Təhvil məntəqələrinin ünvanları, siyahı və keçid",
+      "questions": [
+        "Q: Təhvil məntəqəsinin ünvanlarını necə tapa bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_020.txt",
+      "summary": "Birmarket çatdırılma üsulları: Kuryer ilə çatdırılma, planlı, ekspress, təhvil məntəqəsi, Azərpoçt, çatdırılma vaxtları və ödəniş",
+      "questions": [
+        "Q: Birmarket-də hansı çatdırılma üsulları mövcuddur?"
+      ]
+    },
+    {
+      "file": "chunk_021.txt",
+      "summary": "Kuryer ilə çatdırılma, Çatdırılma gününün seçilməsi, Çatdırılma vaxtı, Çatdırılma haqqı, Bakı şəhərində və regionlarda ",
+      "questions": [
+        "Q: Birmarket-də hansı çatdırılma üsulları mövcüddur?(Kuryer ilə çatdırılma)"
+      ]
+    },
+    {
+      "file": "chunk_022.txt",
+      "summary": "Kuryer ilə ekspress-çatdırılma, Ümumi şərtlər, Çatdırılma haqqı, Məhdudiyyətlər",
+      "questions": [
+        "Q: Birmarket-də hansı çatdırılma üsulları mövcüddur?(ekspress-çatdırılma)"
+      ]
+    },
+    {
+      "file": "chunk_023.txt",
+      "summary": "Təhvil məntəqəsinə çatdırılma zamanı sifariş 4 gün saxlanılır, pulsuzdur, vaxtında götürülməzsə avtomatik ləğv edilir, böyük həcmli məhsullar üçün mövcud deyil",
+      "questions": [
+        "Q: Birmarket-də hansı çatdırılma üsulları mövcüddur?(Təhvil məntəqəsinə)"
+      ]
+    },
+    {
+      "file": "chunk_024.txt",
+      "summary": "Azərpoçt vasitəsi ilə çatdırılma",
+      "questions": [
+        "Q: Birmarket-də hansı çatdırılma üsulları mövcüddur?(Azərpoçt)"
+      ]
+    },
+    {
+      "file": "chunk_025.txt",
+      "summary": "Məhsul kuryer ilə çatdırıldıqda ödəniş onlayn və ya kart vasitəsilə tam və ya taksitlə edilə bilər. Sifarişi istənilən şəxs OTP kodu təqdim etməklə qəbul edə bilər, sənədlər tələb olunmur.",
+      "questions": [
+        "Q: Məhsulu kuryer ilə çatdırılma zamanı necə təhvil ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_026.txt",
+      "summary": "Kreditlə ödəniş zamanı məhsulun təhvili, yalnız kredit sahibi sifarişi qəbul edə bilər, tələb olunan sənədlər: şəxsiyyət vəsiqəsi, xarici pasport, sürücülük vəsiqəsi, alternativ sənəd.",
+      "questions": [
+        "Q: Kreditlə ödəniş zamanı məhsulu kuryer vasitəsilə necə təhvil ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_027.txt",
+      "summary": "Kreditlə ödənişi üçüncü şəxs qəbul edirsə, Tələblər: Notariat və ya ASAN təsdiqli etibarnamə, şəxsiyyət vəsiqəsi və sənəd təqdimatı, Etibarnamənin fiziki və onlayn forması, Proses: etibarnamənin hazırlanması və təhvil alanın kuryerə təqdim etməsi",
+      "questions": [
+        "Q: Kreditlə ödənişi üçüncü şəxs qəbul edirsə, məhsulu necə təhvil ala bilər?"
+      ]
+    },
+    {
+      "file": "chunk_028.txt",
+      "summary": "Kart vasitəsi ilə ödəniş, OTP və sifariş nömrəsi tələbləri, üçüncü şəxs tərəfindən təhvil almaq mümkündür, ödəniş məbləği üzrə OTP məcburiyyəti.",
+      "questions": [
+        "Q: Məhsulu təhvil məntəqəsində kart ilə necə ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_029.txt",
+      "summary": "Onlayn ödənişdə sifarişi yalnız sifariş edən şəxs ala bilər, tələb olunan sənədlər OTP və şəxsiyyət vəsiqəsi, üçüncü şəxs yalnız etibarnamə ilə ala bilər.",
+      "questions": [
+        "Q: Təhvil məntəqəsində onlayn ödənişlə sifarişi necə ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_030.txt",
+      "summary": "Kredit sifarişini yalnız kredit sahibi ala bilər, OTP və şəxsiyyət vəsiqəsi tələb olunur, üçüncü şəxs yalnız etibarnamə ilə ala bilər, PUDO-da müəyyən sənədlər qəbul edilmir.",
+      "questions": [
+        "Q: Kredit sifarişini təhvil məntəqəsindən necə ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_031.txt",
+      "summary": "Onlayn ödənişlə Azərpoçtdan sifarişin təhvil alınması qaydaları, tələb olunan sənədlər və üçüncü şəxsin götürə bilməməsi.",
+      "questions": [
+        "Q: Məhsulu Azərpoçt-dan necə təhvil ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_032.txt",
+      "summary": "Kreditlə ödəniş zamanı Azərpoçtdan sifarişin təhvil alınma qaydaları, tələb olunan sənədlər, üçüncü şəxs tərəfindən alınma şərtləri və rüsumlar.",
+      "questions": [
+        "Q: Kreditlə sifarişi Azərpoçtdan necə təhvil ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_033.txt",
+      "summary": "Sifarişin rəsmiləşdirilməsi addımları: səbətə məhsul əlavə etmək, çatdırılma və ödəniş üsulunu seçmək, təsdiqləmə, dəstək imkanları.",
+      "questions": [
+        "Q: Sifarişi necə rəsmiləşdirə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_034.txt",
+      "summary": "Sifarişin ləğvi və dəyişdirilməsi tətbiqdə 'Mənim sifarişlərim' bölməsindən mümkündür, ləğv səbəbi qeyd edilməlidir, dəyişiklik üçün əvvəlcə ləğv edərək yenidən sifariş tamamlanmalıdır.",
+      "questions": [
+        "Q: Sifarişimi necə ləğv edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_035.txt",
+      "summary": "Birmarket mobil tətbiqi və veb saytında məhsul kataloquna baxmaq mümkündür, kateqoriyalar, filtrlər və axtarış vasitəsilə istədiyiniz məhsulu tapa bilərsiniz.",
+      "questions": [
+        "Q: Məhsulları harada görə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_036.txt",
+      "summary": "Məhsulun xüsusiyyətləri və təsviri tətbiqdə və veb saytında məhsul səhifəsində göstərilir, 'Bütün xüsusiyyətlərə bax' və ya 'Texniki göstəricilərə baxmaq' düymələri vasitəsilə ətraflı məlumat əldə olunur.",
+      "questions": [
+        "Q: Məhsulun xüsusiyyətlərini harada görə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_037.txt",
+      "summary": "Məhsulların əksəriyyəti zəmanətlidir, müddəti məhsulun növünə və satıcıya görə fərqlənir, xüsusiyyətlər bölməsində göstərilir, alışdan öncə yoxlamaq tövsiyə olunur.",
+      "questions": [
+        "Q: Məhsulların zəmanəti varmı?"
+      ]
+    },
+    {
+      "file": "chunk_038.txt",
+      "summary": "Quraşdırma xidməti bütün montaj tələb edən məhsullar üçün mümkündür, ödəniş sifariş zamanı göstərilmir, operator 24 saat ərzində əlaqə saxlayır və bütün detallar bildirir.",
+      "questions": [
+        "Q: Quraşdırma xidməti nədir və necə qeyd olunur?"
+      ]
+    },
+    {
+      "file": "chunk_039.txt",
+      "summary": "ƏDV verilməsi satıcının vergi statusundan asılıdır. Bəzi satıcılar sadələşdirilmiş vergi ödəyicisidir və ƏDV təqdim etmir, digər satıcılar isə rəsmi ƏDV qəbzi təqdim edirlər. Tətbiq və veb sayt üzrə məhsul səhifəsində ƏDV işarəsi yoxlanılır.",
+      "questions": [
+        "Q: Məhsul üçün ƏDV (vergi qəbzi) verilir?"
+      ]
+    },
+    {
+      "file": "chunk_040.txt",
+      "summary": "Birmarket-də məhsulları Birbank taksit kartı ilə hissə-hissə ödəmək mümkündür. Tətbiqdə və veb saytda məhsulun yanında sarı xanada taksit müddəti göstərilir. Satıcılar öz təkliflərini təqdim edir, başqa satıcılara baxaraq daha uzun müddət seçmək olar.",
+      "questions": [
+        "Q: Taksitə neçə ay bölündüyünü harada görə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_041.txt",
+      "summary": "Məhsulun geri qaytarılması keyfiyyətli, keyfiyyətsiz və zədələnmiş məhsullar üzrə həyata keçirilir. Keyfiyyətli məhsullar açılmamış olmalı, qablaşdırma və çeki qorunmalıdır. Keyfiyyətsiz məhsullarda qüsurlar foto/video ilə göstərilməlidir. Zədələnmiş məhsullar təhvil zamanı yoxlanmalıdır. Bəzi məhsullar qaytarılmır, lakin keyfiyyətsiz olduqda qaytarmaq mümkündür.",
+      "questions": [
+        "Q: Geri qaytarma şərtləri nədir?"
+      ]
+    },
+    {
+      "file": "chunk_042.txt",
+      "summary": "Geri qaytarma müraciəti Birmarket tətbiqi vasitəsilə, müraciət addımları, tələb olunan məlumatlar, əlaqə müddəti və məsləhətlər.",
+      "questions": [
+        "Q: Geri qaytarma üçün necə müraciət etməliyəm?"
+      ]
+    },
+    {
+      "file": "chunk_043.txt",
+      "summary": "Geri qaytarılan məhsulun ödəniş üsulları, müddətləri və fərqli ödəniş metodlarına görə qaytarma şərtləri.",
+      "questions": [
+        "Q: Geri qaytarılan məhsulun ödənişi necə qaytarılır?"
+      ]
+    },
+    {
+      "file": "chunk_044.txt",
+      "summary": "Bir Bonus loyallıq proqramı, üstünlükləri və istifadə sahələri haqqında ümumi məlumat.",
+      "questions": [
+        "Q: Bir Bonus nədir?"
+      ]
+    },
+    {
+      "file": "chunk_045.txt",
+      "summary": "BirBonus qazanma yolları, ödəniş zamanı və partnyor mağazalarda bonus əldə etmə üsulları.",
+      "questions": [
+        "Q: Necə bonus qazana bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_046.txt",
+      "summary": "Bonus qazanmaq üçün promokodu əlavə etmək və aktiv kampaniyalardan yararlanmaq kifayətdir, bonuslar sifarişdən sonra avtomatik hesabınıza əlavə olunur.",
+      "questions": [
+        "Q: Birmarket-dən sifariş etdikdə bonus qazanmaq üçün nə etmək lazımdır?"
+      ]
+    },
+    {
+      "file": "chunk_047.txt",
+      "summary": "BirBonus istifadəçiləri qazandıqları bonusları Birmarket və Trendyol-da onlayn alış-verişdə, partnyor mağazalarda barkodla, Birbank/m10 tətbiqində biletlər, mobil balans və kommunal ödənişlər üçün istifadə edə bilərlər.",
+      "questions": [
+        "Q: Qazandığım bonuslarımı necə istifadə edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_048.txt",
+      "summary": "Special abunəlik qoşulduqda əlavə üstünlüklər, abunə haqqı, pulsuz çatdırılma, bonuslar, partnyor üstünlükləri, komissiyasız bonus köçürmələr.",
+      "questions": [
+        "Q: Special abunəliyi nədir?"
+      ]
+    },
+    {
+      "file": "chunk_049.txt",
+      "summary": "Bonusların izlənməsi, balansın yoxlanması, BirBonus kabineti, BirBonus kartı, sürətli və rahat yoxlama üsulları.",
+      "questions": [
+        "Q: Bonuslarımı harada görə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_050.txt",
+      "summary": "Birmarket çatdırılma xidməti, Trendyol sifarişləri Azərbaycana çatdırılır, təhlükəsiz təhvil, dəstək komandası, məmnuniyyətin təmin olunması.",
+      "questions": [
+        "Q: Birmarket çatdırılma xidməti nədir?"
+      ]
+    },
+    {
+      "file": "chunk_051.txt",
+      "summary": "Trendyol-un Azərbaycana birbaşa çatdırılması, Azərbaycan ünvanının qeyd edilməsi, vasitəçisiz sifariş, Birmarket tərəfindən çatdırılma.",
+      "questions": [
+        "Q: Trendyol-un Azərbaycana birbaşa çatdırılmaya başlaması nə deməkdir?"
+      ]
+    },
+    {
+      "file": "chunk_052.txt",
+      "summary": "Sifarişin qəbulu, Bəyannamə təsdiqi, Təhvil verilməsi, SMS bildiriş, Ünvana çatdırılma,",
+      "questions": [
+        "Q: Çatdırılma prosesi necə işləyir?"
+      ]
+    },
+    {
+      "file": "chunk_053.txt",
+      "summary": "Trendyol-dan birbaşa sifarişlərin mərhələləri, Türkiyədaxili karqo, Bəyannamə, Azərbaycana çatdırılma,",
+      "questions": [
+        "Q: Trendyol-dan birbaşa çatdırılma müddəti neçə gündür?"
+      ]
+    },
+    {
+      "file": "chunk_054.txt",
+      "summary": "Çatdırılma haqqı, Pulsuz xidmət, Məhsul qiyməti, Əlavə ödəniş yoxdur,",
+      "questions": [
+        "Q: Çatdırılma haqqı necə hesablanır?"
+      ]
+    },
+    {
+      "file": "chunk_055.txt",
+      "summary": "300 dollar limiti, Gömrük rüsumu, Fiziki şəxslər, 30 gün ərzində, Limitin hesablanması,",
+      "questions": [
+        "Q: 300 dollar limiti nədir və kimlərə şamil olunur?"
+      ]
+    },
+    {
+      "file": "chunk_056.txt",
+      "summary": "Birmarket avtomatik Gömrük bəyannaməsi, Tətbiq, Kabinet bölməsi, Avtomatik razılıq, ASAN Login,",
+      "questions": [
+        "Q: Birmarket avtomatik Gömrük bəyannaməsi necə edilir?"
+      ]
+    },
+    {
+      "file": "chunk_057.txt",
+      "summary": "Smart Customs, Elektron bəyannamə, Tətbiq yükləmək, Sadələşdirilmiş bəyannamə, Gömrük rüsumu,",
+      "questions": [
+        "Q: Smart Customs vasitəsilə gömrük bəyannaməsi nədir və necə edilir?"
+      ]
+    },
+    {
+      "file": "chunk_058.txt",
+      "summary": "BirBonus Special abunəliyi, abunə haqqı, Birmarket və tərəfdaş mağazalarda bonuslar, pulsuz çatdırılma, komissiyasız bonus köçürmələri",
+      "questions": [
+        "Q: “Special abunəlik” nədir və hansı üstünlükləri var?"
+      ]
+    },
+    {
+      "file": "chunk_059.txt",
+      "summary": "Parfüm, batareya və digər təhlükəli məhsulların çatdırılmasında gecikmə səbəbləri, DG – Dangerous Goods",
+      "questions": [
+        "Q: Sifarişim uzun müddətdir “Bəyannamə təsdiqlənib” mərhələsində qalıb, niyə?"
+      ]
+    },
+    {
+      "file": "chunk_060.txt",
+      "summary": "Kuryer ilə əlaqə, şəxsi nömrə verilməməsi, dispetçerlərə müraciət, çatdırılma vaxtı",
+      "questions": [
+        "Q: Kuryerlə necə əlaqə saxlaya bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_061.txt",
+      "summary": "Sifarişin dəyişdirilməsi mümkün olmaması, ləğv edib yenidən sifariş etmək, ödəniş üsulu və taksit seçimi",
+      "questions": [
+        "Q: Sifariş verdikdən sonra onu necə dəyişə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_062.txt",
+      "summary": "Çatdırılma növü seçimi: PUDO və ünvan üzrə, ünvan əlavə etmə prosesi",
+      "questions": [
+        "Q: Çatdırılma növünü necə seçə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_063.txt",
+      "summary": "PUDO və Poçt nöqtələrində bağlamanın saxlanma müddəti, sifarişin utilizə olunması",
+      "questions": [
+        "Q: PUDO və Poçt nöqtələrində bağlama neçə gün saxlanılır?"
+      ]
+    },
+    {
+      "file": "chunk_064.txt",
+      "summary": "Bəzi məhsullar sifariş edilə bilməz: 18+, kəsici alətlər, bəzi kimyəvi tərkibli mallar, dini nəşrlər.",
+      "questions": [
+        "Q: Hər məhsul sifariş edilə bilərmi?"
+      ]
+    },
+    {
+      "file": "chunk_065.txt",
+      "summary": "İlkin ödəniş məhsulun dəyəri ilə kredit limitinin uyğunluğundan asılıdır; limit keçirsə ödəniş tələb olunur, keçmirsə yoxdur.",
+      "questions": [
+        "Q: Niyə ilkin ödəniş tələb olunur?"
+      ]
+    },
+    {
+      "file": "chunk_066.txt",
+      "summary": "Bank imtina səbəbini göstərmir; ümumi səbəblər: mənfi kredit tarixçəsi, mövcud öhdəliklər, zaminlik.",
+      "questions": [
+        "Q: Bank niyə mənə kredit verməkdən imtina edib?"
+      ]
+    },
+    {
+      "file": "chunk_067.txt",
+      "summary": "Xarici vətəndaşlar Smart Customs-da qeydiyyat üçün pasport seriyası və nömrəsini istifadə etməlidir; məlumat Trendyol sifarişi ilə uyğun olmalıdır.",
+      "questions": [
+        "Q: Mən xarici vətəndaşam, bəyannaməni necə doldurum?"
+      ]
+    },
+    {
+      "file": "chunk_068.txt",
+      "summary": "FİN kodunu Trendyol tətbiqi -> Hesabım -> Trendyol Asistan -> Gömrük bəyannaməm bölməsindən dəyişmək olar; köhnə bəyannamə silinməlidir.",
+      "questions": [
+        "Q: FİN kodum yanlışdır, necə dəyişə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_069.txt",
+      "summary": "Bütün SIM dəstəkləyən cihazlar rəsmi qeydiyyatlıdır; aktivləşdirmədən sonra müştəriyə SMS gəlir; 1 ay ərzində avtomatik qeydiyyat.",
+      "questions": [
+        "Q: Satılan telefonlar qeydiyyatdan keçibmi?"
+      ]
+    },
+    {
+      "file": "chunk_070.txt",
+      "summary": "Kredit limitini artırmaq mümkün deyil.",
+      "questions": [
+        "Q: Kredit limitini necə artırmaq olar?"
+      ]
+    },
+    {
+      "file": "chunk_071.txt",
+      "summary": "Sifariş izləmək üçün Trendyol tətbiqi, Birmarket tətbiqi, Smart Customs və SMS nömrəsi istifadə edilə bilər.",
+      "questions": [
+        "Q: Trendyol üzərindən sifariş etdiyim məhsulu necə izləyə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_072.txt",
+      "summary": "Kredit limitinin sıfırlanması adətən ödəniş gecikməsinə görə olur; dəqiq səbəb üçün Kapital Bank ilə əlaqə saxlayın.",
+      "questions": [
+        "Q: Kredit limitim niyə sıfırlanıb?"
+      ]
+    },
+    {
+      "file": "chunk_073.txt",
+      "summary": "Çatdırılma vaxtı intervalları kuryer, PUDO, Azərpoçt və karqomat üçün göstərilib; intervalları dəyişmək üçün dispetçerlərə müraciət etmək lazımdır.",
+      "questions": [
+        "Q: Çatdırılma vaxtını necə dəyişmək olar?"
+      ]
+    },
+    {
+      "file": "chunk_074.txt",
+      "summary": "Kredit xətti tam ödənişdən sonra Kapital Bank filialına müraciət etməklə bağlanır.",
+      "questions": [
+        "Q: Kredit limitini necə bağlaya bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_075.txt",
+      "summary": "Birmarket-də sifariş ödənişi bonuslardan istifadə etməklə həyata keçirilə bilər; balans BirBank tətbiqində, ödəniş zamanı kassada ştrix kodu göstərilə bilər.",
+      "questions": [
+        "Q: Bonuslardan necə istifadə edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_076.txt",
+      "summary": "Sifarişin PUDO nöqtəsini dəyişmək üçün sifarişin ləğvi və yenidən rəsmiləşdirilməsi tələb olunur.",
+      "questions": [
+        "Q: Sifarişi verdiyim PUDO nöqtəsini dəyişmək mümkündürmü?"
+      ]
+    },
+    {
+      "file": "chunk_077.txt",
+      "summary": "Məhsulu kreditlə almaq üçün səbətə əlavə etmək, kredit seçimini seçmək, çatdırılma və şəxsi məlumatları daxil etmək lazımdır, sonra sistem kredit tarixçəsini yoxlayır və qərar verir.",
+      "questions": [
+        "Q: Məhsulu kreditlə necə ala bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_078.txt",
+      "summary": "Bir kliklə ödəniş funksiyası kart məlumatlarını təkrar daxil etmədən bütün sifarişləri avtomatik və təhlükəsiz şəkildə ödəməyə imkan verir.",
+      "questions": [
+        "Q: “Bir kliklə ödəniş” nədir?"
+      ]
+    },
+    {
+      "file": "chunk_079.txt",
+      "summary": "Gizlədilmiş sifarişləri Trendyol tətbiqində Hesabım → Trendyol Assistant → Digər bölməsindən geri qaytarmaq mümkündür. Bu yalnız 050, 051 və 055 prefiksli nömrələr üçün aktivdir.",
+      "questions": [
+        "Q: Sifarişim gizlənibsə, onu necə bərpa edə bilərəm?"
+      ]
+    },
+    {
+      "file": "chunk_080.txt",
+      "summary": "Eyni məhsuldan birdən çox sifariş vermək mümkün deyil, əgər 300 ABŞ dolları və ya 10 kq limiti keçilərsə, sifariş kommersiya məqsədli hesab olunur və gömrük rüsumu tətbiq olunur.",
+      "questions": [
+        "Q: Niyə eyni məhsuldan birdən çox sifariş edə bilmirəm?"
+      ]
+    }
+  ]
+}
