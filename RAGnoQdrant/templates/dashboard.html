@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birmarket Support Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .stat-card h3 {
+            color: #7f8c8d;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .stat-card.warning .value {
+            color: #f39c12;
+        }
+
+        .stat-card.success .value {
+            color: #27ae60;
+        }
+
+        .queue-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .queue-section h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #2c3e50;
+        }
+
+        .queue-item {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .queue-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .queue-item.priority-high {
+            border-left-color: #e74c3c;
+            background: #fff5f5;
+        }
+
+        .queue-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .queue-item-id {
+            font-weight: 700;
+            font-size: 16px;
+            color: #667eea;
+        }
+
+        .queue-item-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .queue-item-query {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.waiting {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge.assigned {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .badge.priority-high {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .badge.priority-normal {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #229954;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #95a5a6;
+        }
+
+        .empty-state svg {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-left: 4px solid #667eea;
+            animation: slideIn 0.3s ease;
+            max-width: 350px;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .notification.new-request {
+            border-left-color: #f39c12;
+        }
+
+        .lang-flag {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎧 Birmarket Support Dashboard</h1>
+        <p>Real-time customer support management</p>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card warning">
+                <h3>Ожидают ответа</h3>
+                <div class="value" id="queue-count">{{ queue_count }}</div>
+            </div>
+
+            <div class="stat-card success">
+                <h3>Операторов онлайн</h3>
+                <div class="value" id="agents-count">{{ agents_count }}</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Средн. время ответа</h3>
+                <div class="value">~2м</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Чатов сегодня</h3>
+                <div class="value">0</div>
+            </div>
+        </div>
+
+        <div class="queue-section">
+            <h2>📋 Очередь обращений</h2>
+            <div id="queue-container"></div>
+        </div>
+    </div>
+
+    <div id="notifications-container"></div>
+
+    <script>
+        // WebSocket подключение
+        const ws = new WebSocket('ws://localhost:8000/ws/dashboard');
+
+        ws.onopen = () => {
+            console.log('✅ Connected to dashboard');
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+
+            if (data.type === 'queue_update') {
+                updateQueue(data.data.queue);
+                document.getElementById('queue-count').textContent = data.data.count;
+            }
+            else if (data.type === 'new_request') {
+                showNotification(data.data);
+                // Обновляем очередь
+                loadQueue();
+            }
+        };
+
+        ws.onerror = (error) => {
+            console.error('WebSocket error:', error);
+        };
+
+        // Загрузка очереди
+        async function loadQueue() {
+            try {
+                const response = await fetch('/api/queue');
+                const data = await response.json();
+                updateQueue(data.queue);
+                document.getElementById('queue-count').textContent = data.count;
+            } catch (error) {
+                console.error('Failed to load queue:', error);
+            }
+        }
+
+        // Обновление отображения очереди
+        function updateQueue(queue) {
+            const container = document.getElementById('queue-container');
+
+            if (queue.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <h3>Нет ожидающих обращений</h3>
+                        <p>Все запросы обработаны</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = queue.map((item, index) => `
+                <div class="queue-item ${item.priority === 'high' ? 'priority-high' : ''}">
+                    <div class="queue-item-header">
+                        <div>
+                            <span class="queue-item-id">#${item.session_id.substr(0, 8).toUpperCase()}</span>
+                            <span class="badge ${item.status}">${item.status}</span>
+                            <span class="badge priority-${item.priority}">${item.priority}</span>
+                        </div>
+                        <button class="btn btn-success" onclick="takeChat('${item.session_id}')">
+                            ✋ Взять чат
+                        </button>
+                    </div>
+
+                    <div class="queue-item-meta">
+                        <span>👤 ${item.user_name}</span>
+                        <span>🌐 ${item.language.toUpperCase()}</span>
+                        <span>📁 ${item.category}</span>
+                        <span>⏰ ${formatTime(item.created_at)}</span>
+                    </div>
+
+                    <div class="queue-item-query">
+                        <strong>Вопрос:</strong> ${item.query}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Взять чат
+        async function takeChat(sessionId) {
+    try {
+        const agentId = 'agent_' + Math.random().toString(36).substr(2, 9);
+
+        const response = await fetch(`http://localhost:8000/api/assign/${sessionId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                agent_id: agentId
+            })
+        });
+
+        if (response.ok) {
+            // ИСПРАВЛЕНО: открываем чат на правильном сервере
+            window.open(`http://localhost:8001/agent-chat/${sessionId}?agent_id=${agentId}`, '_blank');
+
+            // Обновляем очередь
+            loadQueue();
+        } else {
+            alert('Ошибка при взятии чата');
+        }
+    } catch (error) {
+        console.error('Failed to assign chat:', error);
+        alert('Ошибка при взятии чата: ' + error);
+    }
+}
+
+        // Показать уведомление
+        function showNotification(data) {
+            const container = document.getElementById('notifications-container');
+
+            const notification = document.createElement('div');
+            notification.className = 'notification new-request';
+            notification.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <div>
+                        <strong style="display: block; margin-bottom: 5px;">
+                            🔔 Новое обращение
+                        </strong>
+                        <p style="font-size: 13px; color: #7f8c8d; margin-bottom: 8px;">
+                            ${data.user_name} • ${data.language.toUpperCase()} • ${data.priority}
+                        </p>
+                        <p style="font-size: 14px; color: #2c3e50;">
+                            ${data.query_preview}
+                        </p>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()"
+                            style="background: none; border: none; font-size: 20px; cursor: pointer; color: #95a5a6;">
+                        ×
+                    </button>
+                </div>
+            `;
+
+            container.appendChild(notification);
+
+            // Проигрываем звук (опционально)
+            playNotificationSound();
+
+            // Автоудаление через 10 секунд
+            setTimeout(() => {
+                notification.remove();
+            }, 10000);
+        }
+
+        // Звук уведомления
+        function playNotificationSound() {
+            // Можно добавить звуковой файл
+            // const audio = new Audio('/static/notification.mp3');
+            // audio.play();
+        }
+
+        // Форматирование времени
+        function formatTime(isoString) {
+            const date = new Date(isoString);
+            const now = new Date();
+            const diff = Math.floor((now - date) / 1000); // в секундах
+
+            if (diff < 60) return 'только что';
+            if (diff < 3600) return `${Math.floor(diff / 60)} мин назад`;
+            if (diff < 86400) return `${Math.floor(diff / 3600)} ч назад`;
+            return date.toLocaleDateString('ru-RU');
+        }
+
+        // Загружаем очередь при старте
+        loadQueue();
+
+        // Обновляем каждые 30 секунд
+        setInterval(loadQueue, 30000);
+    </script>
+</body>
+</html>
