@@ -4,7 +4,7 @@ FastAPI приложение для RAG системы Birmarket с встрое
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
-from langdetect import detect
+from useful_func import detect_lang
 from support_handoff import handoff
 from datetime import datetime
 from contextlib import asynccontextmanager
@@ -900,7 +900,7 @@ async def process_query(request: QueryRequest):
         initial_cache = stats.cache_hits
 
         # ВАЖНО: теперь answer_query возвращает 4 элемента вместо 3
-        response_text, docs, selected_files, feedback_id = answer_query(
+        response_text, docs, selected_files, feedback_id = await answer_query(
             query=request.query,
             user_id=user_id
         )
@@ -1053,8 +1053,8 @@ async def submit_feedback(request: FeedbackRequest):
 
     # Определяем язык из оригинального запроса
     try:
-        lang = detect(pending["original_query"])
-        if lang not in ["az", "ru", "en"]:
+        lang = detect_lang(pending["original_query"])
+        if lang not in ["az", "ru"]:
             lang = "az"  # fallback
     except:
         lang = "az"
