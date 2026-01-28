@@ -42,7 +42,7 @@ def detect_lang(query: str) -> str:
 
     return 'en'
 
-def contextualize_query(query: str, user_id: str | None) -> str:
+async def contextualize_query(query: str, user_id: str | None) -> str:
     """
     Переформулирует запрос в самостоятельный + учитывает предыдущий ответ бота
     """
@@ -90,9 +90,9 @@ Standalone question (or continuation topic):"""
         ]
 
         try:
-            response = llm.invoke(messages)
+            response = await llm.ainvoke(messages)
         except Exception:
-            response = fallback_llm.invoke(messages)
+            response = await fallback_llm.ainvoke(messages)
 
         contextualized = response.content.strip().strip('"\'')
 
@@ -108,7 +108,7 @@ Standalone question (or continuation topic):"""
         return query
 
 
-def classify_query_with_llm(query: str) -> str:
+async def classify_query_with_llm(query: str) -> str:
     """
     Классификация намерения через LLM (для сложных случаев)
     """
@@ -128,7 +128,7 @@ Response (ONE WORD ONLY):"""
     ]
 
     try:
-        response = llm.invoke(messages)
+        response = await llm.ainvoke(messages)
         intent = response.content.strip().upper()
 
         # Валидация ответа
