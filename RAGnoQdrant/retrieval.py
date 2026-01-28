@@ -13,7 +13,7 @@ from logger_setup import setup_logger
 
 logger = setup_logger()
 
-def hybrid_summary_search(query: str, top_k: int = 30, category: str = None) -> list[Document]:
+def hybrid_summary_search(query: str, top_k: int = 15, category: str = None) -> list[Document]:
     """
     Упрощённый поиск БЕЗ Qdrant:
     BM25 → FlashRank
@@ -32,21 +32,6 @@ def hybrid_summary_search(query: str, top_k: int = 30, category: str = None) -> 
             if doc.metadata.get("category") == category
         ]
 
-    # 3. FlashRank reranking
-    class SimpleRetriever(BaseRetriever):
-        docs: list
-
-        def _get_relevant_documents(self, query: str, **kwargs):
-            return self.docs
-
-    temp_retriever = SimpleRetriever(docs=bm25_docs)
-    compression_retriever = ContextualCompressionRetriever(
-        base_compressor=summary_compressor,  # ← FlashRank
-        base_retriever=temp_retriever
-    )
-
-    reranked = compression_retriever.invoke(query)
-
-    return reranked[:top_k]
+    return bm25_docs[:top_k]
 
 __all__ = ["hybrid_summary_search"]
