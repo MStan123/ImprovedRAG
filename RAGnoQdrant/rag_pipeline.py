@@ -1,6 +1,7 @@
 from pathlib import Path
 import uuid
 import re
+import time
 from langchain_core.documents import Document
 from langchain_classic.retrievers import ContextualCompressionRetriever
 from langchain_core.retrievers import BaseRetriever
@@ -19,7 +20,7 @@ from feedback_manager import feedback_manager
 
 logger = setup_logger()
 
-def answer_query(
+async def answer_query(
         query: str,
         user_id: str | None = None,
         session_id: str | None = None,
@@ -38,7 +39,7 @@ def answer_query(
     logger.info(f"🌍 Detected language: {user_lang}")
 
     # 1. Контекстуализация запроса
-    contextualized_query = contextualize_query(normalized_query, user_id)
+    contextualized_query = await contextualize_query(normalized_query, user_id)
     logger.info(f"Processing query (user_id: {user_id or 'no-user'}, session: {session_id or 'no-session'}): {query}")
     if contextualized_query != normalized_query:
         logger.info(f"→ Contextualized to: {contextualized_query}")
@@ -143,7 +144,7 @@ def answer_query(
     # ========== ОБЫЧНАЯ ОБРАБОТКА ЗАПРОСА (если нет pending action) ==========
 
     # ==================== SMART ROUTING ====================
-    intent = classify_query_with_llm(contextualized_query)
+    intent = await classify_query_with_llm(contextualized_query)
     logger.info(f"🎯 Final routing decision: {intent}")
 
     # ==================== ORDER STATUS ====================
@@ -184,9 +185,9 @@ def answer_query(
             }]
 
             try:
-                response = llm.invoke(messages)
+                response = await llm.ainvoke(messages)
             except Exception:
-                response = fallback_llm.invoke(messages)
+                response = await fallback_llm.ainvoke(messages)
 
             final_response = response.content
 
@@ -197,27 +198,29 @@ def answer_query(
 
     # ==================== KNOWLEDGE BASE (RAG) ====================
     if intent == "KNOWLEDGE_BASE":
+        start_total = time.time()
         logger.info("📚 Routing to Knowledge Base (RAG)")
 
         # 2. Гибридный retrieval
-        summary_docs = hybrid_summary_search(contextualized_query, top_k=30)
+        start = time.time()
+        summary_docs = hybrid_summary_search(contextualized_query, top_k=15)
         selected_files = [doc.metadata["file"] for doc in summary_docs]
+        logger.info(f"⏱️ Summary search: {time.time() - start:.2f}s")
 
         # 3. Загрузка детальных чанков
-        chunks_dir = Path("/home/user/PyCharmMiscProject/RAG/chunks")
+        from documents import detailed_chunks_cache
+
+        start = time.time()
         detailed_docs = []
         for file_name in selected_files:
-            file_path = chunks_dir / file_name
-            if file_path.exists():
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    detailed_docs.append(
-                        Document(
-                            page_content=content,
-                            metadata={"source": file_name, "type": "detailed_chunk"}
-                        )
+            if file_name in detailed_chunks_cache:
+                detailed_docs.append(
+                    Document(
+                        page_content=detailed_chunks_cache[file_name],
+                        metadata={"source": file_name, "type": "detailed_chunk"}
                     )
-
+                )
+        logger.info(f"⏱️ Loading chunks: {time.time() - start:.2f}s")
         if not detailed_docs:
             response = "К сожалению, не нашёл релевантной информации по вашему вопросу."
 
@@ -252,7 +255,9 @@ def answer_query(
             base_compressor=summary_compressor,
             base_retriever=temp_retriever
         )
+        start = time.time()
         reranked_docs = compression_retriever.invoke(contextualized_query)
+        logger.info(f"⏱️ Reranking: {time.time() - start:.2f}s")
 
         # 5. Формируем контекст
         context = "\n\n".join(doc.page_content for doc in reranked_docs)
@@ -327,10 +332,14 @@ def answer_query(
         logger.info("🤖 Request to Azure OpenAI")
         stats.llm_calls += 1
 
+        start = time.time()
         try:
-            response = llm.invoke(messages)
+            response = await llm.ainvoke(messages)
         except Exception:
-            response = fallback_llm.invoke(messages)
+            response = await fallback_llm.ainvoke(messages)
+
+        logger.info(f"⏱️ LLM call: {time.time() - start:.2f}s")
+        logger.info(f"⏱️ TOTAL RAG time: {time.time() - start_total:.2f}s")
 
         # Подсчёт токенов
         usage = response.response_metadata.get("usage", {})
@@ -436,7 +445,7 @@ def answer_query(
             ai_response=final_response,
             category="knowledge_base",
             selected_files=selected_files,
-            from_cache=from_cache,  # ✅ ТЕПЕРЬ ИНИЦИАЛИЗИРОВАНА
+            from_cache=from_cache,
             handoff_triggered=handoff_triggered
         )
 
