@@ -5,7 +5,7 @@ logger = setup_logger()
 
 FlashrankRerank.model_rebuild()
 
-summary_compressor = FlashrankRerank(model="ms-marco-MiniLM-L-12-v2", top_n=25)
+summary_compressor = FlashrankRerank(model="ms-marco-MiniLM-L-12-v2", top_n=7)
 
 logger.info("FlashRank rerankers initialized")
 
